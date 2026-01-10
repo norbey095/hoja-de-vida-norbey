@@ -3,6 +3,14 @@
   --secondary-color: #ecf0f1;
   --accent-color: #3498db;
   --font-family: 'Arial', sans-serif;
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --border-radius: 8px;
+  --border-radius-sm: 6px;
+  --border-color: #e1e1e1;
 }
 
 * {
@@ -11,11 +19,18 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   font-family: var(--font-family);
   line-height: 1.6;
   background-color: var(--secondary-color);
   color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 header {
@@ -62,11 +77,12 @@ nav ul li a {
   background-color: var(--accent-color);
   color: #fff;
   padding: 12px 25px;
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   text-decoration: none;
   font-weight: bold;
   transition: background 0.3s;
 }
+
 .btn-cv:hover {
   background-color: #2980b9;
 }
@@ -76,8 +92,8 @@ nav ul li a {
   display: none;
   max-width: 1200px;
   width: calc(100% - 80px);
-  margin: 3rem auto;
-  padding: 0 2rem;
+  margin: var(--spacing-xl) auto;
+  padding: 0 var(--spacing-lg);
 }
 
 .seccion.activa {
@@ -91,7 +107,7 @@ section h2 {
 }
 
 .section {
-  padding: 0 2rem;
+  padding: 0 var(--spacing-lg);
 }
 
 section ul {
@@ -135,8 +151,8 @@ p {
 /* Project cards */
 .project-card {
   margin-bottom: 2.5rem;
-  padding: 1.5rem;
-  border-radius: 8px;
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
   background-color: #f5f7fa;
 }
 
@@ -155,7 +171,8 @@ p {
   background-color: var(--primary-color);
   color: #fff;
   text-decoration: none;
-  border-radius: 6px;
+  border-radius: var(--border-radius-sm);
+  transition: opacity 0.3s;
 }
 
 .btn-secondary {
@@ -175,9 +192,9 @@ p {
 
 .skill-block {
   background-color: #fff;
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   padding: 12px 14px;
-  border: 1px solid #e1e1e1;
+  border: 1px solid var(--border-color);
 }
 
 .skill-title {
@@ -207,9 +224,9 @@ p {
 
 .education-item {
   background-color: #fff;
-  border-radius: 8px;
-  padding: 14px;
-  border: 1px solid #e1e1e1;
+  border-radius: var(--border-radius);
+  padding: var(--spacing-md);
+  border: 1px solid var(--border-color);
 }
 
 .education-item h3 {
@@ -227,30 +244,24 @@ p {
 .cert-card {
   background-color: #fff;
   border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 15px;
-  text-align: center;
+  border-radius: var(--border-radius);
+  padding: var(--spacing-md);
   cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.cert-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-.cert-card a {
-  text-decoration: none;
-  color: var(--primary-color);
-  font-weight: bold;
-}
-
-/* Make the whole cert card appear as a link and improve focus/hover states */
-.cert-card {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 18px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cert-card:hover,
+.cert-card:focus-within {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.cert-card:focus {
+  outline: 3px solid rgba(52,152,219,0.25);
+  outline-offset: 2px;
 }
 
 .cert-card a {
@@ -277,17 +288,6 @@ p {
   flex: 0 0 auto;
   color: var(--accent-color);
   font-size: 1.1rem;
-}
-
-.cert-card:hover,
-.cert-card:focus-within {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-}
-
-.cert-card:focus {
-  outline: 3px solid rgba(52,152,219,0.25);
-  outline-offset: 2px;
 }
 
 #inicio {
@@ -376,6 +376,19 @@ p {
   .menu-toggle {
     display: block;
   }
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: var(--spacing-lg) var(--spacing-md);
+  text-align: center;
+  margin-top: auto;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
 }
 
 
