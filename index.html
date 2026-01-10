@@ -13,10 +13,10 @@
       <nav>
         <ul class="nav-links" id="navLinks">
           <li><a href="#" data-target="inicio">Inicio</a></li>
+          <li><a href="#" data-target="proyectos">Proyectos</a></li>
           <li><a href="#" data-target="quien-soy">Quién soy</a></li>
           <li><a href="#" data-target="skills">Skills</a></li>
           <li><a href="#" data-target="educacion">Educación</a></li>
-          <li><a href="#" data-target="cv">Hoja de vida</a></li>
           <li><a href="#" data-target="certificados">Certificados</a></li>
         </ul>
         <div class="menu-toggle" id="menuToggle">&#9776;</div>
@@ -28,8 +28,10 @@
   <div class="inicio-contenedor">
     
     <div class="inicio-texto">
-      <h1>Bienvenido, soy desarrollador web</h1>
-      <p>Apasionado por crear soluciones digitales y aprender continuamente en el mundo del desarrollo de software.</p>
+      <h1>Hola, soy Desarrollador Full Stack Junior.</h1>
+      <p class="inicio-subtitulo">Java · Spring Boot · Angular</p>
+      <p>Desarrollo aplicaciones web full stack utilizando Java, Spring Boot y Angular, con enfoque en buenas prácticas, arquitectura limpia y aprendizaje continuo.</p>
+      <p style="margin-top:16px;"><a href="assets/cv/Hoja-de-vida-norbey.pdf" target="_blank" class="btn-cv" aria-label="Ver Hoja de Vida">Ver Hoja de Vida</a></p>
     </div>
 
     <div class="inicio-imagen">
@@ -39,6 +41,69 @@
   </div>
 </div>
 
+    <section id="proyectos" class="seccion section">
+      <h2>Proyectos</h2>
+
+      <!-- Proyecto principal -->
+      <div class="project-card">
+        <h3>Plataforma Full Stack – Arquitectura de Microservicios</h3>
+
+        <p>
+          Proyecto académico desarrollado durante un bootcamp full stack, enfocado
+          en la construcción de una aplicación web modular utilizando arquitectura
+          de microservicios.
+        </p>
+
+        <p><strong>Tecnologías:</strong></p>
+        <ul>
+          <li>Java, Spring Boot, Spring Data JPA, Spring Security</li>
+          <li>Angular, TypeScript</li>
+          <li>MySQL</li>
+          <li>Git</li>
+        </ul>
+
+        <p><strong>Características:</strong></p>
+        <ul>
+          <li>APIs REST</li>
+          <li>Separación por dominios y servicios</li>
+          <li>Comunicación entre microservicios</li>
+          <li>Autenticación y control básico de seguridad</li>
+        </ul>
+
+        <a
+          href="https://github.com/norbey095?tab=repositories"
+          target="_blank"
+          class="btn"
+        >
+          Ver repositorios en GitHub
+        </a>
+      </div>
+
+      <!-- Otros proyectos -->
+      <div class="project-card">
+        <h3>Otros proyectos académicos y personales</h3>
+
+        <p>
+          Proyectos desarrollados como parte de mi formación y aprendizaje continuo,
+          enfocados en frontend y backend.
+        </p>
+
+        <ul>
+          <li>Aplicaciones frontend con Angular</li>
+          <li>APIs REST con Java y Spring Boot</li>
+          <li>Proyectos de práctica con HTML, CSS y JavaScript</li>
+        </ul>
+
+        <a
+          href="https://github.com/norbey095?tab=repositories"
+          target="_blank"
+          class="btn btn-secondary"
+        >
+          Ver GitHub
+        </a>
+      </div>
+    </section>
+
 
   <div class="seccion" id="quien-soy">
     <h2>Quién soy</h2>
@@ -47,38 +112,82 @@
         <img src="assets/img/FotoAlejo.jpeg" alt="Foto de Tu Nombre">
       </div>
       <div class="texto-container">
-        <p>Inicié mi carrera profesional como Técnico de operaciones comerciales, trabajando en diferentes empresas y adquiriendo experiencia en atención y coordinación de procesos. Sin embargo, siempre tuve curiosidad por la tecnología y la programación, lo que me llevó en noviembre de 2022 a estudiar el Técnico laboral en Asistente en Análisis y Desarrollo de Software en CENSA.</p>
-        <p>Durante mis estudios profundicé en Java, Angular, bases de datos y desarrollo web y móvil. Además, participé en proyectos teóricos y adelantos de aplicaciones móviles. Actualmente, mi enfoque está totalmente en el desarrollo de software, con especial interés en desarrollo web y mobile, y sigo aprendiendo constantemente mediante cursos y bootcamps.</p>
-        <p>Estoy buscando oportunidades para aplicar y seguir desarrollando mis habilidades, contribuyendo con mi entusiasmo y conocimientos a proyectos reales.</p>
+        <p>Soy desarrollador de software junior con formación técnica y tecnológica en análisis y desarrollo de software. He trabajado en proyectos académicos y de bootcamp desarrollando aplicaciones full stack con Java, Spring Boot y Angular.</p>
+        <p>Me interesa construir soluciones claras y bien estructuradas, aplicando buenas prácticas de desarrollo y aprendiendo constantemente nuevas tecnologías. Busco seguir creciendo como desarrollador en entornos colaborativos y orientados a la mejora continua.</p>
       </div>
     </div>
   </div>
 
   <div class="seccion" id="skills">
     <h2>Skills</h2>
-    <ul>
-      <li>Java, Spring Boot, Spring Data, Spring Security</li>
-      <li>Angular, TypeScript, HTML, CSS, SASS, BEM</li>
-      <li>Kotlin básico para Android</li>
-      <li>Git, GitFlow, SCRUM</li>
-      <li>Base de datos MySQL y MongoDB</li>
-    </ul>
+    <div class="skills-grid">
+      <div class="skill-block">
+        <h3 class="skill-title">Backend</h3>
+        <ul class="skill-list">
+          <li>Java</li>
+          <li>Spring Boot, Spring Data JPA, Spring Security</li>
+          <li>APIs REST</li>
+        </ul>
+      </div>
+
+      <div class="skill-block">
+        <h3 class="skill-title">Frontend</h3>
+        <ul class="skill-list">
+          <li>Angular</li>
+          <li>TypeScript</li>
+          <li>HTML, CSS, SASS</li>
+          <li>Metodología BEM</li>
+          <li>Atomic Design</li>
+        </ul>
+      </div>
+
+      <div class="skill-block">
+        <h3 class="skill-title">Bases de datos</h3>
+        <ul class="skill-list">
+          <li>MySQL</li>
+          <li>MongoDB</li>
+        </ul>
+      </div>
+
+      <div class="skill-block">
+        <h3 class="skill-title">Herramientas y metodologías</h3>
+        <ul class="skill-list">
+          <li>Git, GitFlow</li>
+          <li>SCRUM</li>
+        </ul>
+      </div>
+
+      <div class="skill-block">
+        <h3 class="skill-title">Otros</h3>
+        <ul class="skill-list">
+          <li>Kotlin (básico) para Android</li>
+          <li>JUnit</li>
+        </ul>
+      </div>
+    </div>
   </div>
 
   <div class="seccion" id="educacion">
     <h2>Educación</h2>
-    <ul>
-      <li>Técnico de operaciones comerciales - SENA</li>
-      <li>Técnico laboral en Análisis y Desarrollo de Software - CENSA</li>
-      <li>Bootcamp Power Up FullStack - PRAGMAPRAGMA (Angular & Java)</li>
-      <li>Tecnólogo en análisis y desarrollo de software - SENA (Estudiando actuamente)</li>
-    </ul>
+    <div class="education-list">
+      <div class="education-item">
+        <h3>Tecnólogo en Análisis y Desarrollo de Software</h3>
+        <p><em>SENA — En formación (desde septiembre 2025)</em></p>
+      </div>
+
+      <div class="education-item">
+        <h3>Bootcamp Power Up Full Stack</h3>
+        <p><em>Pragma — Angular &amp; Java</em></p>
+      </div>
+
+      <div class="education-item">
+        <h3>Técnico Laboral en Análisis y Desarrollo de Software</h3>
+        <p><em>CENSA</em></p>
+      </div>
+    </div>
   </div>
 
-  <div class="seccion" id="cv">
-    <h2>Hoja de vida</h2>
-    <a href="assets/cv/Hoja-de-vida-norbey.pdf" target="_blank" class="btn-cv">Ver Hoja de Vida</a>
-  </div>
+  <!-- Sección `cv` eliminada: la hoja de vida se muestra en la sección de inicio -->
 
   <div class="seccion" id="certificados">
     <h2>Certificados</h2>

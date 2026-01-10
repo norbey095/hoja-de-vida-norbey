@@ -32,6 +32,37 @@ const certGrid = document.getElementById('certGrid');
 CERTIFICADOS.forEach(cert => {
   const card = document.createElement('div');
   card.classList.add('cert-card');
-  card.innerHTML = `<a href="${cert.archivo}" target="_blank">${cert.titulo}</a>`;
+  // make the card focusable for keyboard users
+  card.tabIndex = 0;
+
+  const link = document.createElement('a');
+  link.href = cert.archivo;
+  link.target = '_blank';
+  link.rel = 'noopener noreferrer';
+  link.setAttribute('aria-label', `Abrir certificado ${cert.titulo} en nueva pestaña`);
+
+  const body = document.createElement('div');
+  body.classList.add('cert-body');
+
+  const title = document.createElement('div');
+  title.classList.add('cert-title');
+  title.textContent = cert.titulo;
+
+  const icon = document.createElement('div');
+  icon.classList.add('cert-icon');
+  icon.innerHTML = '&#x2197;'; // north east arrow as external link indicator
+
+  body.appendChild(title);
+  body.appendChild(icon);
+  link.appendChild(body);
+  card.appendChild(link);
   certGrid.appendChild(card);
+
+  // Open link when pressing Enter on the card (keyboard accessibility)
+  card.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      link.click();
+    }
+  });
 });
