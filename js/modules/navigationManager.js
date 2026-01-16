@@ -1,3 +1,5 @@
+import { MenuToggle } from './menuToggle.js';
+
 export const NavigationManager = {
   sections: [],
   links: [],
@@ -20,6 +22,7 @@ export const NavigationManager = {
     e.preventDefault();
     const target = e.currentTarget.dataset.target;
     this._setActive(target);
+    MenuToggle.close();
   },
 
   _setActive(sectionId) {
